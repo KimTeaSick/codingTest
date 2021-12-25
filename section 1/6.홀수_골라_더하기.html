@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function solution(arr){
+      let answer = [ 0 , 999 ];
+      for(let i = 0; i <= arr.length; i++){
+        if(arr[i] % 2 === 1) {
+          answer[0] += arr[i];
+          if(arr[i] < answer[1])
+            answer[1] = arr[i];
+        }
+      }
+      return answer;
+    }
+    arr = [12,77,38,41,53,92,85]
+    console.log(solution(arr));
+  </script>
+</body>
+</html>
