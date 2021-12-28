@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(str) {
+      let answer = '';
+
+      //str = str.toLowerCase().replace(/[^0-9]/g,'');
+
+      for(let i of str){
+        if(!isNaN(i)){
+          answer += i;
+        }
+      }
+      
+      return parseInt(answer);
+    }
+
+    let str = 'a0lsdlkj8aysd8931229jdsao';
+    console.log(solution(str));
+  </script>
+</body>
+
+</html>
