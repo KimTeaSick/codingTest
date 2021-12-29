@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(num) {
+      let answer;
+      let max = Number.MIN_SAFE_INTEGER;
+      for( let i of num){
+        // sum = i.toString().split("").reduce((a, b)a + Number(b),0)
+        let tmp = i, sum = 0;
+        while(tmp){
+        sum += tmp % 10;
+        tmp = Math.floor(tmp / 10);
+        }
+        console.log(sum);
+        if(max < sum){
+          max = sum;
+          answer = i;
+        }else if(sum === max){
+          if(i > answer) answer = i;
+        }
+      }
+      return answer;
+    }
+
+    let number = [128, 460, 603, 40, 521, 137, 123];
+    console.log(solution(number));
+  </script>
+</body>
+
+</html>
