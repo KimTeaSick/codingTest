@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+
+  <body>
+    <script>
+
+      function solution (participant, completion) {
+        let answer;
+        participant.sort();
+        completion.sort();
+
+        for(let i = 0; i <= participant.length; i++){
+          if(participant[i] !== completion[i]){
+            answer = participant[i];
+          }
+        }
+        return answer;
+      }
+
+      const participant = ["leo", "kiki", "eden"];
+      const completion  = ["eden", "kiki"];
+
+      console.log(solution(participant, completion));
+    </script>
+  </body>
+</html>
